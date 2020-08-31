@@ -4,9 +4,8 @@ import hangman
 
 
 # A. Getting secret word
-# 1. Secret word should have atleast 6 letters
-# 2. Secret word should have no punctuation
-# 3. Secret word should not be a proper noun
+# 1. Secret word should have atleast 6 letters,no punctautaion,proper noun
+
 
 def test_secret_word_6_letters():
     assert all(hangman.get_secret_word("./test_data/1.words") == "policeman" for _ in range(100))
@@ -44,7 +43,7 @@ def test_mask_word_repetitive():
     assert all([hangman.mask_word(words[i], guess[i]) == masks[i] for i in range(len(words))])
 
 
-# C. Checking inputs
+# C. Checking inputs test cases
 # 1. Condition1:  One letter guesses
 # 2. Condition2:  No repetitive guesses
 # 3. Condition3:  Only alphabets
